@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        /*
+        function greet(){
+            console.log('Hello!')
+        }
+        greet();
+
+        function greet2(name) {
+            console.log(`Hello ${name}`)
+        }
+        greet2()
+        */
+        function weather(degreeCel){
+            let DegreeFar = (degreeCel * 9/5) + 32
+            console.log(DegreeFar)
+        }
+        weather(100) 
+
+        function weather2(DegreeFar) {
+            let degreeCel = (DegreeFar - 32) * 5/9
+            console.log(degreeCel)
+        }
+        weather2(100)
+
+        function weatherall (deg, type) {
+            if(type === 'C'){
+                let convertdeg = (deg * 9/5) + 32
+                console.log(convertdeg)
+            } else if (type === 'F') {
+                let convertdeg = (deg - 32) * 5/9
+                console.log(convertdeg)
+            }
+        }
+        weatherall(100, 'F')
+    </script>
+</body>
+</html>
