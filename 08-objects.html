@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Objects</title>
+    <style>
+             
+    </style>
+</head>
+<body>
+   <!-- ddd -->
+    
+
+    <script>
+        //test
+        
+        /*
+        const product = {
+            name: "socks",
+            price: 1090
+        };
+        console.log(product);
+        console.log(product.name)
+        console.log(product.price)
+
+        product.name = "cotton socks"
+        console.log(product);
+
+        //can make new objects outside of brackets
+        product.newprop = true
+        console.log(product);
+
+        delete product.newprop
+        console.log(product);
+
+        console.log(typeof product);
+
+       
+
+        const prod2 = {
+            name: 'shirt',
+            'deliv-time': '1 day',
+            rating: {
+                stars: 4.5,
+                count: 87
+            },
+            fun: function func1() {
+                console.log('function inside object')
+            }
+        };
+        console.log(prod2);
+        console.log(prod2.name);
+        console.log(prod2['name']);
+        console.log(prod2['deliv-time'])
+        console.log(prod2.rating)
+        console.log(prod2.rating.count)
+        console.log(prod2['rating']['stars'])
+        console.log(prod2.rating['count'])
+        prod2.fun();
+
+        console.log( JSON.stringify(prod2));
+
+        const jsonstr = JSON.stringify(prod2)
+        console.log(JSON.parse(jsonstr));
+         */
+
+        console.log('hello'.length);
+        console.log('hello'.toLocaleLowerCase());
+        console.log('hello'.toUpperCase());
+
+        const obj1 = {
+            message: 'hello'
+        };
+        const obj2 = obj1;
+        console.log(obj1)
+
+        obj1.message = 'good jobs'
+        console.log(obj1)
+        console.log(obj2)
+        const obj3 = {
+            message :'good jobs'
+        }
+        console.log(obj3 === obj1)
+        console.log(obj2 === obj1)
+        console.log(obj2.message === obj1.message)
+
+        const obj4 = {
+            message: 'good jobs',
+            price: 799
+        }
+        //const message = obj4.message
+        const { message, price } = obj4
+        console.log(message)
+        console.log(price)
+
+
+        const obj5 = {
+            //message: message
+            message,
+            //method: function func1() {
+            //    console.log('method')
+            // }
+            method() {
+                console.log('method')
+            }
+        };
+        console.log(obj5)
+        obj5.method();
+
+
+    </script>
+</body>
+</html>
