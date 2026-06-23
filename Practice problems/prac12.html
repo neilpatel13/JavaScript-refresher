@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>App</title>
+
+</head>
+<body>
+    <script>
+        /*
+      function greeting() {
+        console.log("hello");
+      } 
+      greeting();
+
+      const num = 2;
+
+      const function1 = function() {
+        console.log("hello2");
+      };
+      console.log(function1);
+      console.log(typeof function1);
+      function1();
+
+      const object1 = {
+        num: 2,
+        fun: function(){
+            console.log("hello3");
+        }
+      };
+      object1.fun();
+
+      function display(param) {
+        console.log(param);
+      }
+      display(2);
+
+      function run(param) {
+        param();
+      }
+      run(function() {
+        console.log("hello4");
+      });
+      
+
+      setTimeout(function(){
+        console.log("timeout");
+        console.log('timeoute2');
+      }, 3000); 
+      console.log('next line');
+
+      setInterval(function(){
+        console.log('interval');
+      }, 3000)
+      console.log('next line 2');
+      */
+
+      [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ].forEach(function(value, index) {
+        if(value === 'wash dishes'){
+            return;
+        }
+
+        console.log(index);
+        console.log(value);
+      });
+
+      const add = function(){
+        console.log(2+3);
+      }
+      add();
+
+      function addtwice(param){
+        param();
+        param();
+      }
+      addtwice(add);
+
+      addtwice(function(){
+        console.log("12b")
+      })
+
+      function prac12c(){
+        const button = document.querySelector('.js-12c');
+
+        setTimeout(function(){
+            button.innerHTML = "Finished!"
+        }, 1000)
+      }
+
+      function prac12d(){
+        const button = document.querySelector('.js-12d');
+        button.innerHTML = "Loading..."
+
+        setTimeout(function(){
+            button.innerHTML = "Finished!"
+        }, 1000);
+      }
+      
+      function addcart(){
+        const res = document.querySelector(".js-fillin");
+        res.innerHTML = "Added";
+        setTimeout(function(){
+            res.innerHTML = "";
+        }, 2000);
+      }
+      
+      let timeoutid;
+      function addcart2(){
+        
+        const res = document.querySelector(".js-fillin2");
+        res.innerHTML = "Added2";
+        
+        clearTimeout(timeoutid);
+        
+        timeoutid = setTimeout(function(){
+            res.innerHTML = "";
+        }, 2000);
+      }
+
+      //12g
+      setInterval(function() {
+        if (document.title === 'App') {
+          document.title = '(2) New messages';
+        } else {
+          document.title = 'App';
+        }
+      }, 1000);
+
+    </script>
+
+    <button class="js-12c" onclick="
+        prac12c();
+    ">Start</button>
+
+    <button class="js-12d" onclick="
+        prac12d();
+    ">Start2</button>
+    <br>
+
+    <button class="cart-12e" onclick="
+        addcart();
+    ">Add to Cart</button>
+
+    <button class="cart-12f" onclick="
+        addcart2();
+    ">Add to Cart2</button>
+    <p class="js-fillin"></p>
+
+    <p class="js-fillin2"></p>
+
+
+</body>
+</html>
